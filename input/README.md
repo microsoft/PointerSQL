@@ -1,0 +1,2 @@
+- Download a preprocessed dataset [link](https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny) to the current folder.
+- Run ``tar -xvjf input.tar.bz2`` to extract input files.

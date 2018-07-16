@@ -1,0 +1,65 @@
+{
+    "app": "nl2prog",
+
+    "train_file": "wikisql_test.dat",
+    "dev_file": "wikisql_test.dat",
+    "test_file": "wikisql_test.dat",
+    "decoder_regex": "pwp(pwq)*",
+    "explicit_pointer": false,
+    "value_based_loss": true,
+
+    "jmt_embedding_file": "jmt_char_n_gram.txt",
+    "glove_embedding_file": "glove.6B.100d.txt",
+    
+    "production_hyper_param": {
+
+        "X1_maxlen": 45,
+        "X2_maxlen": 66,
+        "Y_maxlen": 15,
+
+        "embedding_size": 200,
+        "jmt_embedding_size": 100,
+        "glove_embedding_size": 100,
+
+        "max_epoch": 500,    
+        "batch_size": 200,
+        "n_hidden": 100,
+        "num_layers": 3,
+        "learning_rate": 0.1,
+
+        "dropout_keep_prob": 1.0,
+        "gradient_clip_norm": 10.0,
+        "gradient_noise": 0.3,
+        "gradient_noise_gamma": 0.55,
+
+        "encoder_merge_method": "sequential",
+
+        "num_data_used": null
+    }, 
+
+    "dev_hyper_param": {
+
+        "X1_maxlen": 15,
+        "X2_maxlen": 35,
+        "Y_maxlen": 15,
+
+        "embedding_size": 100,
+        "jmt_embedding_size": 100,
+        "glove_embedding_size": 0,
+
+        "max_epoch": 10,
+        "batch_size": 20,
+        "n_hidden": 100,
+        "num_layers": 3,
+        "learning_rate": 0.1,
+
+        "dropout_keep_prob": 0.9,
+        "gradient_clip_norm": 10.0,
+        "gradient_noise": 0.3,
+        "gradient_noise_gamma": 0.55,
+
+        "encoder_merge_method": "sequential",
+
+        "num_data_used": 500
+    }
+}

@@ -1,0 +1,2 @@
+- Download pretrained model checkpoints [link](https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz) to the current folder.
+- Run ``tar -xvjf model_zoo.tar.bz2`` to extract pretrain models.
