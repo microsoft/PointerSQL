@@ -11,6 +11,7 @@ We present the setup for the WikiSQL experiments.
 - Download a preprocessed dataset [link](https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny) to `input/`
 - Untar the file `tar -xvjf input.tar.bz2`
 
+
 #### Reproduce Preprocess Steps
 
 1. Download data from [WikiSQL](https://github.com/salesforce/WikiSQL). 
@@ -35,6 +36,11 @@ python wikisql_data/scripts/relevance.py
 ```
 6. Download pretrained embeddings from [glove](https://nlp.stanford.edu/projects/glove/) and [character n-gram embeddings](http://www.logos.t.u-tokyo.ac.jp/~hassy/publications/arxiv2016jmt/) and put them under ``input/``
 
+
+#### Note we use a new preprocessed dataset (v2) in the [Execute-Guided Decoding](https://arxiv.org/abs/1807.03100) paper
+- A preprocessed dataset can be found [here](https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t), where the ``wikisql_train.dat``, ``wikisql_test.dat``, ``wikisql_dev.dat`` are the files that can be directly used in training. 
+
+Note: the version 2 dataset matches the v1.1 release of [WikiSQL](https://github.com/salesforce/WikiSQL). The preprocessing script ``wikisql_data/scripts/prepare_v2.py`` (python3 required) processes WikiSQL v1.1 raw data and table files to generate ``wikisql_train.dat``, ``wikisql_test.dat``, ``wikisql_dev.dat``.
 
 
 ## Training
@@ -130,6 +136,8 @@ $ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \
 
 If you use the code in your paper, then please cite it as:
 
+
+
 ```
 @inproceedings{pshuang2018PT-MAML,
   author    = {Po{-}Sen Huang and
@@ -142,6 +150,21 @@ If you use the code in your paper, then please cite it as:
   year      = {2018},
 }
 ```
+
+
+```
+@inproceedings{2018executionguided,
+  author    = {Chenglong Wang and
+               Po{-}Sen Huang and
+               Alex Polozov and
+               Marc Brockschmidt and 
+               Rishabh Singh},
+  title = "{Execution-Guided Neural Program Decoding}",
+  booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)},
+  year = {2018}
+}
+```
+
 
 and
 
